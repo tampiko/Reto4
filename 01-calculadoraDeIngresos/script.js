@@ -1,13 +1,11 @@
 console.log("Script Cargado");
 
-let pedido = [
-  { nombreProducto: "agua", precio: 12 },
-  { nombreProducto: "pan", precio: 23 },
-  { nombreProducto: "burger", precio: 30 },
-];
+// require('../scripts.js');
+// import { validaNumericos } from "../scripts.js";
+
+let pedido = [];
 
 const clean = () => {
-  console.log("limpiar");
   pedido = [];
   dibujaTabla();
   document.querySelector("#total").innerHTML = "";
@@ -15,21 +13,35 @@ const clean = () => {
 };
 
 const agregaProducto = (nombreProducto, precio) => {
-  console.log(nombreProducto);
-  console.log(precio);
   pedido.push({ nombreProducto, precio });
-  console.log(pedido);
   dibujaTabla();
 };
 
 const revisaProducto = () => {
+  error = false;
+  oculta('alertNombreProducto')
+  oculta('alertPrecioProducto')
   let nombreProducto = document.querySelector("#nombreProducto").value;
-  let precio = parseFloat(document.querySelector("#precio").value);
+  let precio = document.querySelector("#precio").value;
+  if (precio == 0 || precio.length == 0) {
+    error = true;
+    muestra('alertPrecioProducto')
+  }
   if (nombreProducto.length == 0) {
-    console.log("vacio");
+    error = true;
+    muestra('alertNombreProducto')
+    return;
   }
 
-  agregaProducto(nombreProducto, precio);
+  if (error) {
+    return;
+  }
+
+
+
+  agregaProducto(nombreProducto, parseFloat(precio));
+  document.querySelector("#nombreProducto").value = '';
+  document.querySelector("#precio").value = '';
 };
 
 const dibujaTabla = () => {
@@ -64,3 +76,5 @@ const dibujaTabla = () => {
   foot.innerHTML = "";
   foot.appendChild(tr);
 };
+oculta('alertNombreProducto');
+oculta('alertPrecioProducto');
