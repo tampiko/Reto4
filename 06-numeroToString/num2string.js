@@ -202,3 +202,7 @@ function NumeroALetras(num) {
       data.letrasCentavos
     );
 }
+
+/*  Basado en el gist:
+    https://gist.github.com/alfchee/e563340276f89b22042a
+*/
