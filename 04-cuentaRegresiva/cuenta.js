@@ -58,3 +58,16 @@ const comenzar = () => {
 const detener = () => {
   activo = false;
 };
+
+const clean = () => {
+  detener();
+  oculta("alertfechaDestino");
+  oculta("alertEvento");
+  document.querySelector("#days").textContent = "";
+  document.querySelector("#hours").textContent = "";
+  document.querySelector("#minutes").textContent = "";
+  document.querySelector("#seconds").textContent = "";
+  document.querySelector("#tableEvento").textContent = "";
+  document.querySelector("#evento").value = "";
+  document.querySelector("#fechaDestino").value = "";
+};
