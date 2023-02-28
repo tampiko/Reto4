@@ -29,16 +29,10 @@ pintaVotos = () => {
   porxb = (xb / total) * 100;
   porps = (ps / total) * 100;
   porsw = (sw / total) * 100;
-
-console.log('porxb ',parseInt(porxb));
-console.log('porps ',parseInt(porps));
-console.log('porsw ',parseInt(porsw));
-
   asignaValores();
-  document.querySelector("#xbBar").style.width = `${parseInt(porxb)}%`;
-  document.querySelector("#psBar").style.width = `${parseInt(porps)}%`;
-  document.querySelector("#swBar").style.width = `${parseInt(porsw)}%`;
-
+  document.querySelector("#xbBar").style.width = `${xb}%`;
+  document.querySelector("#psBar").style.width = `${ps}%`;
+  document.querySelector("#swBar").style.width = `${sw}%`;
   document.querySelector("#uxbBar").style.width = `${porxb}%`;
   document.querySelector("#upsBar").style.width = `${porps}%`;
   document.querySelector("#uswBar").style.width = `${porsw}%`;
