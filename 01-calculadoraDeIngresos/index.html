@@ -28,8 +28,8 @@
         <div class="mb-3 row">
           <label for="precio" class="col-sm-2 col-form-label text-end">Precio :</label>
           <div class="col-sm-10">
-            <input type="number" pattern="[0-9]{10}" class="form-control" id="precio" min="0">
-            <!-- onkeypress='return validaNumericos(event)' -->
+            <input type="number" pattern="[0-9]{10}" class="form-control" id="precio" min="0"
+              onkeypress='return validaNumericos(event)'>
             <div id="alertPrecioProducto" class="alert alert-danger" role="alert">Indique el precio del producto.</div>
           </div>
         </div>
