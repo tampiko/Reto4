@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ratings</title>
+    <title>Juego del Ahorcado</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
@@ -37,94 +37,130 @@
     <a href="../index.html" class="btn btn-primary mt-3">Regresar</a>
 
     <div class="card mt-3">
-      <div class="card-header">Ratings</div>
+      <div class="card-header">Ahorcado</div>
       <div class="card-body">
         <form>
           <div class="mb-3 row">
-            <h1 class="text-center">Choose Wisely</h1>
+            <h1 class="text-center">Adivina la Palabra</h1>
           </div>
+          <div class="mb-3 row">
+            <div class="col-md-6">
+              <img
+                id="imgAhorcado"
+                class="img-fluid img-thumbnail"
+                src="./img/el-ahorcado-00.jpg"
+                alt="ahorcado"
+              />
+              <div class="h-30">
+                <button type="button" class="btn mt-3 btn-outline-primary" onclick="nuevaPalabra()" style="z-index:999999;">
+                  Nueva Palabra
+                </button>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <table class="table table-sm table-striped text-center">
+                <tr>
+                  <td onclick="contiene('A')" id="A" class="cursor" width="10%">
+                    A
+                  </td>
+                  <td onclick="contiene('B')" id="B" class="cursor" width="10%">
+                    B
+                  </td>
+                  <td onclick="contiene('C')" id="C" class="cursor" width="10%">
+                    C
+                  </td>
+                  <td onclick="contiene('D')" id="D" class="cursor" width="10%">
+                    D
+                  </td>
+                  <td onclick="contiene('E')" id="E" class="cursor" width="10%">
+                    E
+                  </td>
+                  <td onclick="contiene('F')" id="F" class="cursor" width="10%">
+                    F
+                  </td>
+                  <td onclick="contiene('G')" id="G" class="cursor" width="10%">
+                    G
+                  </td>
+                  <td onclick="contiene('H')" id="H" class="cursor" width="10%">
+                    H
+                  </td>
+                  <td onclick="contiene('I')" id="I" class="cursor" width="10%">
+                    I
+                  </td>
+                </tr>
+                <tr>
+                  <td onclick="contiene('J')" id="J" class="cursor" width="10%">
+                    J
+                  </td>
+                  <td onclick="contiene('K')" id="K" class="cursor" width="10%">
+                    K
+                  </td>
+                  <td onclick="contiene('L')" id="L" class="cursor" width="10%">
+                    L
+                  </td>
+                  <td onclick="contiene('M')" id="M" class="cursor" width="10%">
+                    M
+                  </td>
+                  <td onclick="contiene('N')" id="N" class="cursor" width="10%">
+                    N
+                  </td>
+                  <td onclick="contiene('Ñ')" id="Ñ" class="cursor" width="10%">
+                    Ñ
+                  </td>
+                  <td onclick="contiene('O')" id="O" class="cursor" width="10%">
+                    O
+                  </td>
+                  <td onclick="contiene('P')" id="P" class="cursor" width="10%">
+                    P
+                  </td>
+                  <td onclick="contiene('Q')" id="Q" class="cursor" width="10%">
+                    Q
+                  </td>
+                </tr>
+                <tr>
+                  <td onclick="contiene('R')" id="R" class="cursor" width="10%">
+                    R
+                  </td>
+                  <td onclick="contiene('S')" id="S" class="cursor" width="10%">
+                    S
+                  </td>
+                  <td onclick="contiene('T')" id="T" class="cursor" width="10%">
+                    T
+                  </td>
+                  <td onclick="contiene('U')" id="U" class="cursor" width="10%">
+                    U
+                  </td>
+                  <td onclick="contiene('V')" id="V" class="cursor" width="10%">
+                    V
+                  </td>
+                  <td onclick="contiene('W')" id="W" class="cursor" width="10%">
+                    W
+                  </td>
+                  <td onclick="contiene('X')" id="X" class="cursor" width="10%">
+                    X
+                  </td>
+                  <td onclick="contiene('Y')" id="Y" class="cursor" width="10%">
+                    Y
+                  </td>
+                  <td onclick="contiene('Z')" id="Z" class="cursor" width="10%">
+                    Z
+                  </td>
+                </tr>
+              </table>
+              <hr />
+              La palabra secreta es:
 
-          <div class="container text-center">
-            <div class="mb-3 row">
-              <div class="col-md-4">
-                <img
-                  class="img-thumbnail"
-                  src="https://i0.wp.com/news.xbox.com/en-us/wp-content/uploads/sites/2/xboxlogoHERO-1-hero-1-hero.jpg?resize=940%2C528&ssl=1"
-                  alt="xbox"
-                />
-                <div class="btn btn-success mt-1" onclick="vota('xb')">+1</div>
-              </div>
-              <div class="col-md-4">
-                <img
-                  class="img-thumbnail"
-                  src="https://as01.epimg.net/meristation/imagenes/2021/07/15/noticias/1626364677_049220_1626364867_portada_normal.jpg"
-                  alt="playstation"
-                />
-                <div class="btn btn-primary mt-1" onclick="vota('ps')">+1</div>
-              </div>
-              <div class="col-md-4">
-                <img
-                  class="img-thumbnail"
-                  src="https://i0.wp.com/elpoderdelasideas.com/wp-content/uploads/nintendo-switch-logo-asimetrico.png?fit=780%2C380&ssl=1"
-                  alt="switch"
-                />
-                <div class="btn btn-danger mt-1" onclick="vota('sw')">+1</div>
+              <div class="text-center">
+                <br /><br />
+                <h1 id="palabraSecreta" class="espaciado"></h1>
+                <h2 id="resultado"></h2>
               </div>
             </div>
           </div>
         </form>
-        <hr />
-        <br />
-        <h2>Resultados</h2>
-        <div class="btn btn-sm btn-info" onclick="reiniciar()">
-          Reiniciar Votaciones
-        </div>
-        <br />
-        <br />
-        <br />
-
-        <h3>Xbox <span class="badge bg-success" id="txtxb"></span></h3>
-
-        <div class="progress">
-          <div
-            id="xbBar"
-            class="progress-bar bg-success"
-            style="width: 0%"
-          ></div>
-        </div>
-
-        <h3>Playstation <span class="badge bg-primary" id="txtps"></span></h3>
-
-        <div class="progress">
-          <div id="psBar" class="progress-bar" style="width: 0%"></div>
-        </div>
-
-        <h3>Switch <span class="badge bg-danger" id="txtsw"></span></h3>
-
-        <div class="progress">
-          <div
-            id="swBar"
-            class="progress-bar bg-danger"
-            style="width: 0%"
-          ></div>
-        </div>
-
-        <hr />
-        <h3>General</h3>
-        <div class="progress-stacked">
-          <div id="uxbBar" class="progress" style="width: 0%">
-            <div class="progress-bar bg-success">Xbox</div>
-          </div>
-          <div id="upsBar" class="progress" style="width: 0%">
-            <div class="progress-bar">PS</div>
-          </div>
-          <div id="uswBar" class="progress" style="width: 0%">
-            <div class="progress-bar bg-danger">Switch</div>
-          </div>
-        </div>
       </div>
     </div>
-
+    <canvas style="height:100%;width:100%;position:absolute;left:0px;top:0px;;display: none;" id="confeti"></canvas>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
@@ -132,5 +168,6 @@
     ></script>
     <script src="../scripts.js"></script>
     <script src="./ahorcado.js"></script>
+    <script src="./confeti.js"></script>
   </body>
 </html>
