@@ -99,16 +99,9 @@ contiene();
 ganaste = () => {
   document.querySelector("#confeti").style.display = "block";
   setTimeout(nuevaPalabra, 3000);
-  // nuevaPalabra();
 };
 
 nuevaPalabra = () => {
   location.reload();
-  // console.log("va de nuez");
-  // document.querySelector("#confeti").style.display = "none";
-  // intentos = 0;
-  // palabraSecreta = palabras[parseInt(Math.random() * 10)];
-  // palabra = palabraSecreta;
-  // contiene();
 };
 
