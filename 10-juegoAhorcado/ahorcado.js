@@ -85,6 +85,7 @@ pintaLaPalabra = () => {
     intentos = 6;
     console.log("Perdiste!");
     document.querySelector("#resultado").textContent = "Perdiste!";
+    nuevaPalabra();
   }
   document.querySelector(
     "#imgAhorcado"
